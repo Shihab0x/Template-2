@@ -1,0 +1,403 @@
+$r: #ed563b;
+$a: #007bff;
+$w: #ffffff;
+$b: #232d39;
+$g: #212529;
+$o: #232c39;
+$f: #fafafa;
+$p: #7a7a7a;
+
+@import "buttton.scss";
+
+
+.navbar {
+  z-index: 10;
+  background-color: rgba($color: $w, $alpha: 0.1);
+  text-transform: uppercase;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  .navbar-brand {
+    color: $w;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .navbar-brand:hover {
+    color: $w;
+  }
+  .navbar-brand::after {
+    content: "STUDIO";
+    color: $r;
+  }
+  .navbar-nav {
+    margin: auto;
+    justify-content: space-between;
+    width: 85%;
+    margin-left: auto;
+    .nav-item {
+      padding: 0 auto;
+      .nav-link {
+        color: $w;
+        font-size: 0.8rem;
+      }
+      .active,
+      .nav-link:hover {
+        color: $r !important;
+      }
+    }
+  }
+  .nav-link.active {
+    color: $r;
+    background-color: transparent;
+  }
+}
+.content {
+  position: relative;
+  width: 100%;
+  text-transform: uppercase;
+  .vid {
+    z-index: 0;
+    width: 100%;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    color: $w;
+    background-color: rgba($color: $o, $alpha: 0.8);
+    .container {
+      position: absolute;
+      width: fit-content;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @media (min-width: 1000px) {
+        margin-top: -50px;
+      }
+      .title {
+        font-size: 18px;
+        font-weight: 500;
+      }
+      .header {
+        font-size: 84px;
+        margin: 30px;
+        color: $w;
+      }
+      .header::after {
+        content: " GYM";
+        color: $r;
+      }
+    }
+  }
+}
+.about {
+  margin: 120px 0;
+  text-transform: capitalize;
+  .header {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .header::after {
+    content: " program";
+    color: $r;
+  }
+  .photo {
+    margin: 15px;
+  }
+  .paragraph {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: $p;
+    margin-bottom: 80px;
+    @media (min-width: 1000px) {
+      width: 50%;
+    }
+  }
+  .box {
+    text-align: left;
+    margin-top: 50px;
+    .desc {
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
+    .more {
+      color: $r;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+  .dawn {
+    color: $w;
+    padding: 120px;
+    margin-top: 150px;
+    background: url(../images/cta-bg.jpg) center center;
+    .content {
+      max-width: 920px;
+      .title {
+        font-size: 36px;
+        font-weight: 700;
+        .r {
+          color: $r;
+        }
+      }
+      .desc {
+        margin: 30px auto;
+      }
+    }
+  }
+}
+.classes {
+  .header {
+    color: $b;
+    margin-top: 130px;
+  }
+  .header::after {
+    content: " CLASSES";
+    color: $r;
+  }
+  .paragraph {
+    margin: 25px auto;
+    max-width: 540px;
+    font-size: 0.9rem;
+  }
+  .contain {
+    margin: 80px 0;
+    .list {
+      list-style-type: none;
+      padding: 0;
+      .class {
+        min-width: 300px;
+        font-size: 19px;
+        font-weight: 600;
+        text-transform: capitalize;
+        padding: 30px;
+        margin-bottom: 30px;
+        border: none;
+        border-radius: 5px;
+        color: $b;
+        background-color: $w;
+        box-shadow: 0px 0px 15px rgba($color: #000000, $alpha: 0.1);
+        box-sizing: content-box;
+        .icon {
+          margin-right: 15px;
+        }
+      }
+      .class.active {
+        color: $r;
+      }
+      .class.all {
+        color: $w;
+        background-color: $r;
+        border: 1px solid $r;
+        box-shadow: none;
+        transition: all 300ms ease;
+      }
+      .class.all:hover {
+        color: $r;
+        background-color: $w;
+      }
+    }
+    .box {
+      text-align: left;
+      width: 62%;
+      margin-left: auto;
+      padding: 0;
+      .title {
+        font-weight: 600;
+        margin: 30px 0 20px;
+      }
+      .desc {
+        font-size: 14px;
+        min-height: 85px;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%
+      }
+    }
+  }
+}
+.schedules {
+  .up {
+    padding: 150px 0;
+    background: url(../images/schedule-bg.jpg);
+    .header {
+      color: $w;
+    }
+    .header::after {
+      color: $r;
+      content: " schedule";
+    }
+    .paragraph {
+      color: $w;
+      max-width: 540px;
+      margin: 20px auto;
+    }
+    .list {
+      list-style-type: none;
+      display: flex;
+      width: fit-content;
+      padding: 0;
+      margin: 80px auto 0;
+      color: $w;
+      .link {
+        color: inherit;
+        margin: 10px;
+      }
+      .link.active,
+      .link:hover {
+        color: $r;
+      }
+    }
+    .box {
+      color: $w;
+      margin: 40px auto;
+      font-size: 14px;
+    }
+    .cell {
+      width: 250px;
+      height: 100px;
+      border: 1px solid $w;
+    }
+    .time {
+      opacity: 0;
+    }
+    .time.active {
+      opacity: 1;
+    }
+  }
+  .dawn {
+    .header::after {
+      content: " SCHEDULE";
+      color: $r;
+    }
+    .contain {
+      margin: 80px 0;
+      justify-content: space-between;
+      .box {
+        padding: 40px 40px 20px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 15px rgba($color: $b, $alpha: 0.1);
+        text-align: left;
+        width: 31%;
+        .card {
+          border: none;
+          .card-img-top {
+            border-radius: 5px;
+          }
+          .card-body {
+            padding: 0;
+            .type {
+              color: $r;
+              display: inline-block;
+              margin: 25px 0 10px;
+            }
+            .card-title {
+              font-weight: 600;
+            }
+            .card-text {
+              font-size: 0.9rem;
+              color: $p;
+            }
+            .socail {
+              list-style-type: none;
+              display: flex;
+              justify-content: space-between;
+              width: 40%;
+              padding: 0;
+              .link {
+                color: $b;
+              }
+              .link:hover {
+                color: $r;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.contact {
+  background: url(../images/contact-bg.jpg);
+  padding: 70px;
+  .form {
+    width: 450px;
+    background-color: $w;
+    border-radius: 5px;
+    margin: 50px 0 50px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .input {
+      color: $p;
+      width: 48%;
+      padding: 8px;
+      margin: 0 0 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      resize: none;
+      font-size: 00.9rem;
+      outline: none;
+    }
+  }
+}
+.foot {
+  margin: 10px;
+  .rights {
+    color: $b;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    .link {
+      color: $r;
+    }
+  }
+}
+
+.bg-w {
+  background-color: rgba($color: $f, $alpha: 0.98) !important;
+  box-shadow: 1px 1px 1px $g;
+  position: fixed;
+  .navbar-brand {
+    color: $b;
+  }
+  .navbar-brand:hover {
+    color: $b;
+  }
+  a.nav-link {
+    color: $b !important;
+  }
+}
+.header {
+  color: $b;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 130px auto 15px;
+  text-transform: uppercase !important;
+}
+.paragraph,
+.desc {
+  color: $p;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 20px auto 30px;
+  max-width: 540px;
+  font-size: 0.9rem;
+}
+.link {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+*::selection {
+  color: $w;
+  background-color: $r !important;
+}

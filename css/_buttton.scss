@@ -1,0 +1,22 @@
+$r: #ed563b;
+$n: #f9735b;
+$a: #007bff;
+$w: #ffffff;
+$b: #232d39;
+$g: #212529;
+$o: #232c39;
+
+.bttn {
+  color: $w;
+  background-color: $r !important;
+  padding: 12px 21px !important;
+  border: 1px solid $r;
+  border-radius: 0 !important;
+  text-transform: uppercase;
+  transition: all 300ms ease;
+  text-decoration: none;
+}
+.bttn:hover {
+  color: $n;
+  background-color: $w !important;
+}
